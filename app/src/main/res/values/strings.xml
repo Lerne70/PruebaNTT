@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PruebaNTT</string>
+    <string name="title">Productos</string>
+    <string name="name">Nombre:</string>
+    <string name="description">Descripcion</string>
+    <string name="price">Precio:</string>
+    <string name="back">Cerrar</string>
+
+    <string name="example_text">Example text</string>
+</resources>

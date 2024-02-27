@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DetailProductFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_view_title_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="24dp"
+            tools:text="@string/example_text" />
+
+        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            android:id="@+id/carousel"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            app:autoPlay="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_title_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="24dp" />
+
+        <TextView
+            android:id="@+id/text_view_product_description_detail"
+            style="@style/custom.TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/carousel"
+            app:layout_constraintStart_toStartOf="@+id/carousel"
+            app:layout_constraintEnd_toEndOf="@+id/carousel"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="24dp"
+            tools:text="@string/example_text"/>
+
+        <TextView
+            android:id="@+id/text_view_product_price_detail"
+            style="@style/custom.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_product_description_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            tools:text="@string/example_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Cerrar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/back"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/title"
+            app:strokeWidth="2dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginHorizontal="35dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
