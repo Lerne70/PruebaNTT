@@ -5,13 +5,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.pruebantt.R;
 import com.example.pruebantt.models.Product;
 
@@ -68,21 +66,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewProductName, textViewProductDescription, textViewProductPrice;
-        ImageView imgProduct;
         public ViewHolder(View itemView) {
             super(itemView);
             textViewProductName = itemView.findViewById(R.id.text_view_product_name);
             textViewProductDescription = itemView.findViewById(R.id.text_view_product_description);
             textViewProductPrice = itemView.findViewById(R.id.text_view_product_price);
-            imgProduct = itemView.findViewById(R.id.img_product);
         }
 
         public void bindData(final Product item) {
-            Glide
-             .with(itemView)
-             .load(item.getThumbnail())
-             .centerCrop()
-             .into(imgProduct);
             textViewProductName.setText(item.getTitle());
             textViewProductDescription.setText(item.getDescription());
             textViewProductPrice.setText(String.valueOf(item.getPrice()));

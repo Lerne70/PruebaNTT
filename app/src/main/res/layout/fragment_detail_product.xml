@@ -23,25 +23,25 @@
             android:layout_marginVertical="24dp"
             tools:text="@string/example_text" />
 
-        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-            android:id="@+id/carousel"
+        <ImageView
+            android:id="@+id/image_view_product"
             android:layout_width="350dp"
             android:layout_height="350dp"
-            app:autoPlay="true"
             app:layout_constraintTop_toBottomOf="@+id/text_view_title_product"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginVertical="24dp" />
+            android:layout_marginVertical="24dp"
+            tools:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/text_view_product_description_detail"
             style="@style/custom.TextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/carousel"
-            app:layout_constraintStart_toStartOf="@+id/carousel"
-            app:layout_constraintEnd_toEndOf="@+id/carousel"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_product"
+            app:layout_constraintStart_toStartOf="@+id/image_view_product"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_product"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="24dp"
             tools:text="@string/example_text"/>

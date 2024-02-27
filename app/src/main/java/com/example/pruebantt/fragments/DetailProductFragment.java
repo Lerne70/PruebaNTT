@@ -19,11 +19,6 @@ import com.example.pruebantt.databinding.FragmentDetailProductBinding;
 import com.example.pruebantt.models.Product;
 import com.example.pruebantt.vewmodel.ProductViewModel;
 
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class DetailProductFragment extends Fragment {
 
     private FragmentDetailProductBinding binding;
@@ -48,15 +43,11 @@ public class DetailProductFragment extends Fragment {
         String price = getString(R.string.price) + " " + String.valueOf(product.getPrice());
 
         binding.textViewTitleProduct.setText(product.getTitle());
-        binding.carousel.registerLifecycle(getLifecycle());
-        List<CarouselItem> list = new ArrayList<>();
-
-        product.getImages().forEach(img -> {
-            list.add(new CarouselItem(img));
-        });
-
-        binding.carousel.setData(list);
-
+        Glide
+                .with(requireContext())
+                .load(product.getThumbnail())
+                .centerCrop()
+                .into(binding.imageViewProduct);
         binding.textViewProductDescriptionDetail.setText(product.getDescription());
         binding.textViewProductPriceDetail.setText(price);
 
